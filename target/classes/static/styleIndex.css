@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
+#tp{
+	font-size: 50px
+}
+
+body{
+	font-family: 'Bitter', serif;
+}
+
+h1, h2{
+	color:#EFEFEF;
+	font-family: 'Bitter', serif;
+	text-align: center;
+}
+
+a{
+	color: #EFEFEF;
+}
+
+#a{
+	color: #EFEFEF;
+	background-color: #07889B
+}
+form{
+	width: 500px;	
+}
+label{
+	width: 200px;
+}
+input[type="text"], input[type="number"]{
+	width: 300px;
+}
+textarea{
+	width: 800px;
+	height: 200px;
+}
