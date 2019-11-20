@@ -16,7 +16,7 @@ public class ListarController {
 	
 	@GetMapping("/listar")
 	private ModelAndView getlistar(){
-	
+		
 		ModelAndView mv = new ModelAndView("listar");
 		mv.addObject("livro", lv.findAll());
 		

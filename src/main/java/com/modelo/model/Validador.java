@@ -1,13 +1,16 @@
 package com.modelo.model;
 
-public abstract class Validador {
+public class Validador {
 	
-	public boolean TextoValidadorNLetras(String text, int max, int min) {
+	public boolean TextoValidador(String text, int max, int min) {
 		return text.length() <= max && text.length() >= min;
 	}
 	
-	public boolean NumeroValidador(Integer num, int max, int min) {
+	public boolean NumeroValidador(int num, int max, int min) {
 		return num <= max && num >= min;
 	}
 
+	private boolean isString() {
+		return null;
+	}
 }

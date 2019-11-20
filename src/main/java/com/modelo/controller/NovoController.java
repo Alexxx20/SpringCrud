@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class NovoController {
-	@GetMapping("/cadastro/novo")
+	@GetMapping("/novo")
 	public String novo() {
 		return "novo";
 	}
