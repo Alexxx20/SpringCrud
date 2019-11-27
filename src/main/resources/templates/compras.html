@@ -1,9 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<title>Livros Online</title>
+	<style type="text/css">
+
+		body{
+				font-family: 'Bitter', serif;
+				color: #EFEFEF;
+				background-color: #07889B;
+			}
+			
+			h1, h2{
+				color:#07889B;
+				font-family: 'Bitter', serif;
+				text-align: center;
+			}
+
+			#noe{
+				position: absolute;
+				left: 25%;
+				font-size: 500%
+
+			}
+
+			#preco{
+				position: absolute;
+				left: 35%;
+				top: 10%; 
+				font-size: 500%;
+
+			}
+
+			#livro{
+				width: 20%;
+				height: 20%
+			}
+
+			#but{ 
+				color: #EFEFEF;
+				position: absolute;
+				left: 35%;
+				top: 49.5%;
+				font-size: 250%;
+				width: 15%
+			}
+
+	</style>
 </head>
 <body>
-
+<label id="noe">Ação Humana</label>
+<label id="preco">R$23,00</label>
+<img id="livro" src="C:\Users\1º INF\Desktop\SpringCrud-master\src\main\resources\static\livro1.jpg">
+<button id="but" class="btn btn-warning">Comprar</button>
 </body>
 </html>
