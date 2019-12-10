@@ -1,1 +1,1 @@
-Equipe:Alex Lucena, Ana Caroline e José Victor.
+Equipe:Alex de Lucena, Ana Caroline e José Victor.
