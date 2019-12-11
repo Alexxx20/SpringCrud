@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/styleIndex.css}"/>
+		<meta charset="utf-8">
+		<title>Livros Online</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+	
+			#tp{
+				font-size: 50px
+			}
+			
+			body{
+				font-family: 'Bitter', serif;
+				color: #EFEFEF;
+				background-color: #07889B
+			}
+			
+			h1, h2{
+				color:#EFEFEF;
+				font-family: 'Bitter', serif;
+				text-align: center;
+			}
+			
+			a{
+				color: #EFEFEF;
+				si
+			}
+			
+			form{
+				width: 500px;	
+			}
+			label{
+				width: 200px;
+			}
+			input[type="text"], input[type="number"]{
+				width: 300px;
+			}
+			textarea{
+				width: 300px;
+				height: 200px;
+			}
+	</style>
+	</head>
+	
+	<body>
+	
+		<h1>Listar</h1>
+		<a href="/" class="badge badge-light">Home</a>
+		<a href="/cadastro" class="badge badge-light">Cadastro</a>
+		<table class="table">
+		  <thead class="thead-dark">
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Preço</th>
+		      <th scope="col">Título</th>
+		      <th scope="col">Gênero</th>
+		      <th scope="col">Autor</th>
+		      <th scope="col">Nº de páginas</th>
+		      <th scope="col">Descrição</th>
+		      <th scope="col">Estoque</th>
+		      <th scope="col">Excluir</th>
+		      <th scope="col">Editar</th>
+		    </tr>
+		  </thead>
+		  
+		  <tbody>
+		  
+		   <thead class="thead-light">
+			    <tr th:each="livros : ${livro}">
+			      <th th:text="${livros.identificador}"></th>
+			      <th th:text="${livros.preco}"></th>
+			      <th th:text="${livros.titulo}"></th>
+			      <th th:text="${livros.genero}"></th>
+			      <th th:text="${livros.autor}"></th>
+			      <th th:text="${livros.npaginas}"></th>
+			      <th th:text="${livros.descricao}"></th>
+			      <th th:text="${livros.estoque}"></th>
+			      <th><a th:href="@{'/listar/' + ${livros.identificador}}"><button type="button" class="btn btn-btn btn-danger">Excluir</button></a></th>
+			      <th><a th:href="@{'/editar/' + ${livros.identificador}}"><button type="button" class="btn btn-primary">Editar</button></a></th>
+			    </tr>
+		    
+		    </thead>
+		    
+		  </tbody>
+		  
+		</table>
+		
+		
+	</body>
+	
+</html>

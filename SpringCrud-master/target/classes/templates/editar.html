@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Livros Online</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/css/styleIndex.css}"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
+			.form-control, #o, label{
+				position: relative;
+				left: 3%
+			}
+
+			input, label{
+				font-family: Bitter;
+				color: #0a3d62
+			}
+
+			#dop{position: absolute;
+				top: 20%;
+				left: 41.5%;
+				right: 45%;
+				background-color: #f1f2f6;
+				width: 17%;
+				border-radius: 10px;
+				box-shadow: 10px 5px 2px 1px rgba(0, 0, 0, 0.2);
+			}
+			#descricao{
+				width: 300px;
+				height: 100px;
+			}
+
+			#tp{
+				font-size: 50px
+			}
+			
+			body{
+				background-color: #07889B;
+				font-family: 'Bitter', serif;
+			}
+			
+			h1, h2{
+				color:#EFEFEF;
+				font-family: 'Bitter', serif;
+				text-align: center;
+			}
+			
+			a{
+				color: #EFEFEF;
+			}
+			
+			#a{
+				color: #EFEFEF;
+				background-color: #07889B
+			}
+			form{
+				width: 500px;	
+			}
+			label{
+				width: 200px;
+			}
+			input[type="text"], input[type="number"]{
+				width: 300px;
+			}
+			textarea{
+				width: 300px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Atualize os Dados:</h1>
+		<div id="dop">
+		<form th:object="${livro}" action="/atualizar" method="post"> 
+			<label for="identificador">Id:</label><input th:field="*{identificador}" class="form-control" type="text" readonly="true" name="identificador" id="identificador">
+			<label for="preco">Preço:</label><input th:field="*{preco}" type="number" class="form-control" name="preco" id="preco" placeholder="Digite o preço do Livro">
+			<label for="titulo">Título:</label><input th:field="*{titulo}" type="text" class="form-control" name="titulo" id="titulo" placeholder="Digite o Título">
+			<label for="genero">Gênero:</label><input th:field="*{genero}" type="text" class="form-control" name="genero" id="genero" placeholder="Digite o Gênero">
+			<label for="autor">Autor:</label><input th:field="*{autor}" type="text" class="form-control" name="autor" id="autor" placeholder="Digite o nome do Autor">
+			<label for="npaginas">Números de Páginas:</label><input th:field="*{npaginas}" type="number" name="npaginas" class="form-control" id="npaginas" placeholder="Quantas página há">
+			<label for="descricao">Descrição:</label><textarea th:field="*{descricao}" class="form-control" id="descricao" name="descricao" placeholder="Descreva o serviço"></textarea>
+			<label for="estoque">Quantas Unidades:</label><input th:field="*{estoque}" type="number" placeholder="N° de Unidades" class="form-control" id="estoque" name="estoque"><br>
+			<input type="submit" id="o" class="btn btn-dark">
+			</div>
+		</form>
+	</body>
+</html>
